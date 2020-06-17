@@ -26,7 +26,7 @@ def drawline(img, pt1, pt2, color, thickness=1, style='dotted', gap=10):
                 cv2.line(img, s, e, color, thickness)
             i += 1
 
-
+'''
 def drawpoly(img, pts, color, thickness=1, style='dotted',):
     s = pts[0]
     e = pts[0]
@@ -35,7 +35,7 @@ def drawpoly(img, pts, color, thickness=1, style='dotted',):
         s = e
         e = p
         drawline(img, s, e, color, thickness, style)
-
+'''
 
 def drawrect(img, pt1, pt2, color, thickness=1, style='dotted'):
     pts = [pt1, (pt2[0], pt1[1]), pt2, (pt1[0], pt2[1])]
