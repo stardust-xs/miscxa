@@ -1,2 +1,2 @@
 # miscxa
-Temporary files
+Temporary snippets for gists.
