@@ -1,0 +1,8 @@
+Sending email on exception - https://stackoverflow.com/questions/6182693/python-send-email-when-exception-is-raised
+Sending email on some change occurs - https://stackoverflow.com/questions/55073357/how-to-make-a-python-script-automatically-send-an-email-when-certain-data-is-cha
+WhatsApp with Python - https://www.zeolearn.com/magazine/introduction-to-text-mining-in-whatsapp-chats-using-python
+WhatsApp with Python - https://github.com/sprejerlaila/whatsapp-me
+Getting activity name of Ubuntu [Better way but doesn't work with Python] - https://bbs.archlinux.org/viewtopic.php?id=156660
+Getting activity name of Ubuntu [Same - Better way but doesn't work with Python] - https://askubuntu.com/questions/638533/gnome-terminal-how-to-get-the-existing-title
+Watch directory for changes - http://timgolden.me.uk/python/win32_how_do_i/watch_directory_for_changes.html
+Logging module - https://hg.python.org/cpython/file/2.7/Lib/logging/__init__.py
