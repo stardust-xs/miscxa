@@ -1,0 +1,5 @@
+py -m pip install --upgrade setuptools wheel
+py setup.py sdist bdist_wheel
+py -m pip install --upgrade twine
+py -m twine upload --repository testpypi dist/*
+py -m twine upload dist/*
