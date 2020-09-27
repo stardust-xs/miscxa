@@ -126,13 +126,8 @@ freq = 0
 
 for word in words:
   for sentence in sentences:
-    if word in sentence and (sentence not in dataset.values() and freq == 0):
-      if dataset.values():
-        for value in dataset.values():
-          if value:
-            for v in value:
-              freq = value.count(word)
-      dataset[word] = copy.append(sentence)
+    if word in sentence and sentence not in dataset.values():
+      dataset[word] = sentence
 
     freq = 0
 
