@@ -106,32 +106,32 @@
 # print(parser.parse(start_date).strftime("%Y-%d-%m"))
 
 
-words = ["the", "cat", "dog", "fish", "runs"]
-sentences = ["the dog and cat are friends",
-             "the dog runs all the time",
-             "the dog eats fish",
-             "I love to eat fish",
-             "Granola is yummy too"]
-output = ["",
-          "the dog and cat are friends",
-          "the dog eats fish",
-          "I love to eat fish",
-          "the dog runs all the time"]
-# omitted = ["Granola is yummy too"]
+# words = ["the", "cat", "dog", "fish", "runs"]
+# sentences = ["the dog and cat are friends",
+#              "the dog runs all the time",
+#              "the dog eats fish",
+#              "I love to eat fish",
+#              "Granola is yummy too"]
+# output = ["",
+#           "the dog and cat are friends",
+#           "the dog eats fish",
+#           "I love to eat fish",
+#           "the dog runs all the time"]
+# # omitted = ["Granola is yummy too"]
 
 
-dataset = {}
-copy = []
-freq = 0
+# dataset = {}
+# copy = []
+# freq = 0
 
-for word in words:
-  for sentence in sentences:
-    if word in sentence and sentence not in dataset.values():
-      dataset[word] = sentence
+# for word in words:
+#   for sentence in sentences:
+#     if word in sentence and sentence not in dataset.values():
+#       dataset[word] = sentence
 
-    freq = 0
+#     freq = 0
 
-print(dataset)
+# print(dataset)
 
 # {'the': 'the dog eats fish',
 #  'cat': 'the dog and cat are friends',
@@ -139,3 +139,29 @@ print(dataset)
 #  'fish': 'I love to eat fish'}
 # x = 'the dog runs all the time'
 # print(x.count('the'))
+
+# import datetime as dt
+
+# toadd = dt.timedelta(minutes=10)
+# starttime = dt.datetime.now()
+# endtime = starttime + toadd
+
+
+
+
+# from datetime import datetime, timedelta
+
+# start_time = datetime.now().replace(microsecond=0)
+# end_time = start_time + timedelta(minutes=10)
+
+# print(f"Start time is {start_time} and End time is {end_time}")
+
+
+items = {
+    'flour': [20, 10, 15, 8, 32, 15],
+    'beef': [3, 4, 2, 8, 2, 4],
+    'bread': [2, 3, 3],
+    'cc': [0.3, 0.5, 0.8, 0.3, 1]
+}
+
+print([idx[2] for idx in items.values() if len(idx) >= 3])
