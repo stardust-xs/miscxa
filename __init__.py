@@ -157,11 +157,11 @@
 # print(f"Start time is {start_time} and End time is {end_time}")
 
 
-items = {
-    'flour': [20, 10, 15, 8, 32, 15],
-    'beef': [3, 4, 2, 8, 2, 4],
-    'bread': [2, 3, 3],
-    'cc': [0.3, 0.5, 0.8, 0.3, 1]
-}
+# items = {
+#     'flour': [20, 10, 15, 8, 32, 15],
+#     'beef': [3, 4, 2, 8, 2, 4],
+#     'bread': [2, 3, 3],
+#     'cc': [0.3, 0.5, 0.8, 0.3, 1]
+# }
 
-print([idx[2] for idx in items.values() if len(idx) >= 3])
+# print([idx[2] for idx in items.values() if len(idx) >= 3])
