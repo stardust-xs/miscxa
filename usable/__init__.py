@@ -166,42 +166,53 @@
 
 # print([idx[2] for idx in items.values() if len(idx) >= 3])
 
-import glob
-import os.path as os
-import re
-import uuid
+# import glob
+# import os.path as os
+# import re
+# import uuid
 
 
-def extract_data(source: str,
-                 export: str = None,
-                 nested: bool = False,
-                 delimit: str = ",",
-                 extract: str = "Estimated Ln Prob of Data") -> None:
-  """
-  Extracts values of `Estimated Ln Prob of Data` from source and exports
-  it in a text file.
+# def extract_data(source: str,
+#                  export: str = None,
+#                  nested: bool = False,
+#                  delimit: str = ",",
+#                  extract: str = "Estimated Ln Prob of Data") -> None:
+#   """
+#   Extracts values of `Estimated Ln Prob of Data` from source and exports
+#   it in a text file.
   
-  Args:
-    source: Directory which has `job_01_01-output_f` files.
-    export: Path of the output file.
-    nested: Boolean, if you want to use nested files as well.
-    extract: Keyword whose respective value needs to be extracted.
-  """
-  regex = r"^\b{}\b.+$".format(extract)
-  nest = "**" if nested else "*"
-  values = []
+#   Args:
+#     source: Directory which has `job_01_01-output_f` files.
+#     export: Path of the output file.
+#     nested: Boolean, if you want to use nested files as well.
+#     extract: Keyword whose respective value needs to be extracted.
+#   """
+#   regex = r"^\b{}\b.+$".format(extract)
+#   nest = "**" if nested else "*"
+#   values = []
 
-  for file in glob.glob(f"{source}/{nest}", recursive=True):
-    raw = os.basename(file)
-    if raw.startswith("job_") and raw.endswith("-output_f"):
-      with open(file, "r") as _file:
-        matches = re.finditer(regex, _file.read(), re.MULTILINE)
-        entry = f"{raw}{delimit}{list(matches)[0].group().rsplit('= ')[-1]}\n"
-        values.append(entry)
+#   for file in glob.glob(f"{source}/{nest}", recursive=True):
+#     raw = os.basename(file)
+#     if raw.startswith("job_") and raw.endswith("-output_f"):
+#       with open(file, "r") as _file:
+#         matches = re.finditer(regex, _file.read(), re.MULTILINE)
+#         entry = f"{raw}{delimit}{list(matches)[0].group().rsplit('= ')[-1]}\n"
+#         values.append(entry)
 
-  export = export if export else os.join(source, f"{str(uuid.uuid4())}.txt")
-  with open(export, "w") as _file:
-    _file.writelines(values)
+#   export = export if export else os.join(source, f"{str(uuid.uuid4())}.txt")
+#   with open(export, "w") as _file:
+#     _file.writelines(values)
 
 
-extract_data("/home/xames3/Downloads")
+# extract_data("/home/xames3/Downloads")
+
+
+xa = "Hello World"
+s = []
+for idx, val in enumerate(xa):
+  if idx % 2 == 0:
+    s.append(val.upper())
+  else:
+    s.append(val.lower())
+# s = [val.upper() for idx, val in enumerate(xa) if idx % 2 == 0 else val.lower()]
+print("".join(s))
